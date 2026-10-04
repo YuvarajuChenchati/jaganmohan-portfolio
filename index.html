@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jay — Wedding Films &amp; Photography</title>
+<meta name="description" content="Jaganmohan (Jay) — wedding filmmaker, photographer and video editor. Full wedding films, highlight reels and photography, shot and edited in-house.">
+<meta property="og:title" content="Jay — Wedding Films &amp; Photography">
+<meta property="og:description" content="Wedding films, highlight reels and photography — shot and edited start to finish.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#121309">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121309'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23b98a45' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23b98a45'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#121309;
+    --bg-2:#191a10;
+    --bg-3:#202114;
+    --ink:#ece3d1;
+    --ink-dim:#a89a7f;
+    --line:#2f2c1d;
+    --line-2:#3a3624;
+    --amber:#b98a45;
+    --amber-soft:rgba(185,138,69,.12);
+    --nav-h:68px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:var(--nav-h);}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Work Sans',system-ui,sans-serif; font-weight:300;
+    line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:400; margin:0; letter-spacing:-0.01em;}
+  a{color:inherit}
+  iframe{max-width:100%}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 clamp(16px,5vw,64px);}
+  section{padding:clamp(72px,11vw,136px) 0;}
+  .eyebrow{display:inline-flex; align-items:center; gap:12px; color:var(--amber); font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; font-weight:500;}
+  .eyebrow::before{content:""; width:28px; height:1px; background:var(--amber);}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap; margin-bottom:clamp(40px,6vw,64px);}
+  .section-head h2{font-size:clamp(2rem,4.4vw,3.1rem); line-height:1.08; margin-top:16px; max-width:18ch;}
+  .section-head p{color:var(--ink-dim); max-width:42ch; margin:0;}
+  .divider{border:0; border-top:1px solid var(--line); margin:0;}
+
+  /* Nav */
+  .nav{position:fixed; inset:0 0 auto 0; z-index:50; height:var(--nav-h);
+    padding-top:env(safe-area-inset-top,0px);
+    transition:background .3s, border-color .3s; border-bottom:1px solid transparent;}
+  .nav.scrolled{background:rgba(18,19,9,.86); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-color:var(--line);}
+  .nav .wrap{height:100%; display:flex; align-items:center; justify-content:space-between;}
+  .brand{font-family:'Fraunces',serif; font-size:1.35rem; text-decoration:none; letter-spacing:.01em;}
+  .brand em{color:var(--amber); font-style:normal;}
+  .nav-links{display:flex; gap:34px; list-style:none; margin:0; padding:0;}
+  .nav-links a{text-decoration:none; font-size:.9rem; color:var(--ink-dim); transition:color .2s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{border:1px solid var(--line-2); padding:9px 18px; text-decoration:none; font-size:.85rem; transition:all .2s;}
+  .nav-cta:hover{border-color:var(--amber); color:var(--amber);}
+  .menu-btn{display:none; background:none; border:0; color:var(--ink); font:inherit; font-size:.9rem; cursor:pointer; padding:8px 0;}
+  @media (max-width:860px){
+    .nav-links,.nav-cta{display:none;}
+    .menu-btn{display:block;}
+    .nav.open{background:var(--bg); border-color:var(--line);}
+    .nav.open .nav-links{display:flex; flex-direction:column; gap:0; position:absolute; top:100%; left:0; right:0;
+      background:var(--bg); border-bottom:1px solid var(--line); padding:8px clamp(16px,5vw,64px) 20px;}
+    .nav.open .nav-links a{display:block; padding:14px 0; font-size:1.05rem; border-bottom:1px solid var(--line);}
+  }
+
+  /* Hero */
+  .hero{padding-top:calc(var(--nav-h) + clamp(48px,9vw,110px)); padding-bottom:clamp(56px,8vw,96px);}
+  .hero-top{display:grid; grid-template-columns:1.5fr 1fr; gap:48px; align-items:end;}
+  .hero h1{font-size:clamp(2.6rem,7.2vw,5.6rem); line-height:1; margin-top:22px;}
+  .hero h1 em{color:var(--amber);}
+  .hero-side p{color:var(--ink-dim); font-size:1.08rem; margin:0 0 28px;}
+  .btn-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 24px; text-decoration:none; font-size:.92rem; font-weight:400; transition:all .2s; border:1px solid var(--amber);}
+  .btn-primary{background:var(--amber); color:#151208;}
+  .btn-primary:hover{background:#c99a55;}
+  .btn-ghost{color:var(--ink); border-color:var(--line-2);}
+  .btn-ghost:hover{border-color:var(--amber); color:var(--amber);}
+  @media (max-width:860px){.hero-top{grid-template-columns:1fr; gap:28px;}}
+  .hero-frame{margin-top:clamp(40px,6vw,72px); position:relative;}
+  .hero-frame::before{content:""; position:absolute; inset:-1px; border:1px solid var(--line-2); pointer-events:none;}
+  .video-embed{position:relative; width:100%; aspect-ratio:16/9; background:#000; overflow:hidden;}
+  .video-embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+  .frame-caption{display:flex; justify-content:space-between; color:var(--ink-dim); font-size:.82rem; margin-top:14px; letter-spacing:.04em;}
+
+  /* Stats strip */
+  .strip{border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .strip .wrap{display:grid; grid-template-columns:repeat(4,1fr);}
+  .strip div.cell{padding:30px 0; border-left:1px solid var(--line); padding-left:24px;}
+  .strip div.cell:first-child{border-left:0; padding-left:0;}
+  .strip b{display:block; font-family:'Fraunces',serif; font-weight:400; font-size:1.3rem;}
+  .strip span{color:var(--ink-dim); font-size:.86rem;}
+  @media (max-width:760px){
+    .strip .wrap{grid-template-columns:1fr 1fr;}
+    .strip div.cell:nth-child(3){border-left:0; padding-left:0;}
+    .strip div.cell:nth-child(n+3){border-top:1px solid var(--line);}
+  }
+
+  /* Films */
+  .film-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,48px) clamp(20px,3vw,36px);}
+  .film .video-embed{border:1px solid var(--line);}
+  .film-meta{display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-top:18px;}
+  .film-meta h3{font-size:clamp(1.25rem,2.2vw,1.6rem);}
+  .film-meta span{color:var(--ink-dim); font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap;}
+  .film-num{color:var(--amber); font-family:'Fraunces',serif; font-style:italic; margin-right:10px;}
+  @media (max-width:760px){.film-grid{grid-template-columns:1fr;}}
+
+  /* Reels */
+  .reels{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .reel-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .reel{background:var(--bg); border:1px solid var(--line); display:flex; flex-direction:column;}
+  .reel-frame{position:relative; aspect-ratio:9/16; background:#0c0d06; overflow:hidden;}
+  .reel-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0; background:#fff;}
+  .reel a{display:flex; justify-content:space-between; padding:14px 16px; text-decoration:none; font-size:.86rem; color:var(--ink-dim); border-top:1px solid var(--line); transition:color .2s;}
+  .reel a:hover{color:var(--amber);}
+  @media (max-width:1000px){.reel-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.reel-grid{grid-template-columns:1fr; max-width:360px; margin:0 auto;}}
+
+  /* Services */
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line);}
+  .service{padding:40px 32px 44px 0; border-right:1px solid var(--line);}
+  .service + .service{padding-left:32px;}
+  .service:last-child{border-right:0;}
+  .service .num{font-family:'Fraunces',serif; font-style:italic; color:var(--amber); font-size:1.1rem;}
+  .service h3{font-size:1.55rem; margin-top:18px;}
+  .service p{color:var(--ink-dim); margin:14px 0 0;}
+  .service ul{list-style:none; padding:0; margin:22px 0 0; font-size:.92rem;}
+  .service li{padding:9px 0; border-top:1px solid var(--line);}
+  @media (max-width:860px){
+    .services-grid{grid-template-columns:1fr;}
+    .service, .service + .service{padding:36px 0; border-right:0; border-bottom:1px solid var(--line);}
+  }
+
+  /* Process */
+  .process-list{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; counter-reset:step;}
+  .step{border-top:1px solid var(--amber); padding-top:22px;}
+  .step::before{counter-increment:step; content:"0" counter(step); color:var(--amber); font-size:.8rem; letter-spacing:.2em;}
+  .step h3{font-size:1.25rem; margin-top:12px;}
+  .step p{color:var(--ink-dim); font-size:.95rem; margin:10px 0 0;}
+  @media (max-width:860px){.process-list{grid-template-columns:1fr 1fr; gap:36px 24px;}}
+  @media (max-width:520px){.process-list{grid-template-columns:1fr;}}
+
+  /* About */
+  .about{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .about-grid{display:grid; grid-template-columns:1fr 1.3fr; gap:clamp(32px,6vw,80px); align-items:start;}
+  .about-grid h2{font-size:clamp(2rem,4.4vw,3.1rem); line-height:1.08; margin-top:16px;}
+  .about-grid blockquote{margin:32px 0 0; font-family:'Fraunces',serif; font-style:italic; font-size:1.25rem; color:var(--amber); line-height:1.45; padding-left:20px; border-left:1px solid var(--amber);}
+  .about-body p{color:var(--ink-dim); font-size:1.06rem; margin:0;}
+  .about-body p + p{margin-top:18px;}
+  .tools{display:flex; flex-wrap:wrap; gap:10px; margin-top:32px;}
+  .tools span{border:1px solid var(--line-2); padding:7px 14px; font-size:.84rem; color:var(--ink);}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+
+  /* Contact */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,6vw,80px);}
+  .contact h2{font-size:clamp(2.4rem,6vw,4.4rem); line-height:1.02; margin-top:16px;}
+  .contact h2 em{color:var(--amber);}
+  .contact p.lead{color:var(--ink-dim); margin:22px 0 0; max-width:40ch; font-size:1.05rem;}
+  .contact-list a{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:26px 0; border-top:1px solid var(--line); text-decoration:none; transition:color .2s, padding .25s;}
+  .contact-list a:last-child{border-bottom:1px solid var(--line);}
+  .contact-list .label{font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-dim);}
+  .contact-list .value{font-family:'Fraunces',serif; font-size:clamp(1.05rem,2.4vw,1.4rem); margin-top:4px; word-break:break-word;}
+  .contact-list .arrow{color:var(--amber); font-size:1.3rem; transition:transform .25s;}
+  .contact-list a:hover{color:var(--amber);}
+  .contact-list a:hover .arrow{transform:translateX(6px);}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+
+  footer{border-top:1px solid var(--line); padding:32px 0 calc(32px + env(safe-area-inset-bottom,0px)); color:var(--ink-dim); font-size:.85rem;}
+  footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--amber);}
+
+  /* Reveal */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .9s ease, transform .9s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">Jay<em>.</em></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#films">Films</a></li>
+      <li><a href="#reels">Reels</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Check availability</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="hero-top">
+    <div>
+      <span class="eyebrow">Wedding films &middot; Photography &middot; Editing</span>
+      <h1>Stories cut to be <em>watched again</em> a decade from now.</h1>
+    </div>
+    <div class="hero-side">
+      <p>I'm Jaganmohan — Jay to most. I shoot and edit wedding films, highlight reels and photographs, every one handled in‑house from the first frame to the final grade.</p>
+      <div class="btn-row">
+        <a href="#films" class="btn btn-primary">Watch the films</a>
+        <a href="#contact" class="btn btn-ghost">Book a date &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-frame reveal">
+    <div class="video-embed">
+      <iframe src="https://player.vimeo.com/video/1192036538?h=7ce9e50ef4&title=0&byline=0&portrait=0&color=b98a45" title="Featured wedding film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="frame-caption"><span>Featured film</span><span>Shot &amp; edited by Jay</span></div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="cell"><b>Wedding films</b><span>Full-length, story-led</span></div>
+    <div class="cell"><b>Highlight reels</b><span>Short, social-ready cuts</span></div>
+    <div class="cell"><b>Photography</b><span>Candid &amp; traditional</span></div>
+    <div class="cell"><b>Post-production</b><span>Edit, colour &amp; sound</span></div>
+  </div>
+</div>
+
+<section class="films wrap" id="films">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow">Selected work</span>
+      <h2>Recent wedding films</h2>
+    </div>
+    <p>Full films from the last year, kept exactly as they were delivered to the couples.</p>
+  </div>
+
+  <div class="film-grid">
+    <article class="film reveal">
+      <div class="video-embed">
+        <iframe loading="lazy" src="https://player.vimeo.com/video/1202520787?h=d518e7255d&title=0&byline=0&portrait=0&color=b98a45" title="Akhil &amp; Harshitha — wedding film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="film-meta"><h3><span class="film-num">01</span>Akhil &amp; Harshitha</h3><span>Wedding film</span></div>
+    </article>
+    <article class="film reveal">
+      <div class="video-embed">
+        <iframe loading="lazy" src="https://player.vimeo.com/video/1150042670?h=cc92470c34&title=0&byline=0&portrait=0&color=b98a45" title="Pavan &amp; Sruthi — wedding film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="film-meta"><h3><span class="film-num">02</span>Pavan &amp; Sruthi</h3><span>Wedding film</span></div>
+    </article>
+    <article class="film reveal">
+      <div class="video-embed">
+        <iframe loading="lazy" src="https://player.vimeo.com/video/1200814895?h=a94d52c46d&title=0&byline=0&portrait=0&color=b98a45" title="Srikar &amp; Yashashwini — wedding film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="film-meta"><h3><span class="film-num">03</span>Srikar &amp; Yashashwini</h3><span>Wedding film</span></div>
+    </article>
+    <article class="film reveal">
+      <div class="video-embed">
+        <iframe loading="lazy" src="https://player.vimeo.com/video/1196419637?h=7f0bc123a6&title=0&byline=0&portrait=0&color=b98a45" title="Samyuktha &amp; Rohith — wedding film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="film-meta"><h3><span class="film-num">04</span>Samyuktha &amp; Rohith</h3><span>Wedding film</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="reels" id="reels">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Short form</span>
+        <h2>Highlight reels</h2>
+      </div>
+      <p>Quick vertical edits cut for Instagram — the same weddings, told in under a minute.</p>
+    </div>
+    <div class="reel-grid">
+      <div class="reel reveal">
+        <div class="reel-frame"><iframe loading="lazy" src="https://www.instagram.com/reel/DDhk0LGzVt_/embed" title="Wedding highlight reel 1" allowtransparency="true"></iframe></div>
+        <a href="https://www.instagram.com/reel/DDhk0LGzVt_/" target="_blank" rel="noopener">Open on Instagram <span>&nearr;</span></a>
+      </div>
+      <div class="reel reveal">
+        <div class="reel-frame"><iframe loading="lazy" src="https://www.instagram.com/reel/C_oFXwJPJ5I/embed" title="Wedding highlight reel 2" allowtransparency="true"></iframe></div>
+        <a href="https://www.instagram.com/reel/C_oFXwJPJ5I/" target="_blank" rel="noopener">Open on Instagram <span>&nearr;</span></a>
+      </div>
+      <div class="reel reveal">
+        <div class="reel-frame"><iframe loading="lazy" src="https://www.instagram.com/reel/DPOj7aRk78x/embed" title="Wedding highlight reel 3" allowtransparency="true"></iframe></div>
+        <a href="https://www.instagram.com/reel/DPOj7aRk78x/" target="_blank" rel="noopener">Open on Instagram <span>&nearr;</span></a>
+      </div>
+      <div class="reel reveal">
+        <div class="reel-frame"><iframe loading="lazy" src="https://www.instagram.com/reel/DAQt_zGvrBe/embed" title="Wedding highlight reel 4" allowtransparency="true"></iframe></div>
+        <a href="https://www.instagram.com/reel/DAQt_zGvrBe/" target="_blank" rel="noopener">Open on Instagram <span>&nearr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="services">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow">What I do</span>
+      <h2>Shot, edited and delivered by one person</h2>
+    </div>
+    <p>No hand-offs between a camera crew and an edit team — the person filming your day is the one cutting it.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service reveal">
+      <span class="num">i.</span>
+      <h3>Wedding films</h3>
+      <p>Cinematic, story-led films that follow the day in order, from the first ritual to the last dance.</p>
+      <ul><li>Full-length wedding film</li><li>Teaser &amp; trailer cuts</li><li>Pre-wedding shoots</li></ul>
+    </div>
+    <div class="service reveal">
+      <span class="num">ii.</span>
+      <h3>Photography</h3>
+      <p>Candid moments alongside the traditional portraits families want, edited for a consistent, natural look.</p>
+      <ul><li>Candid &amp; traditional coverage</li><li>Couple portraits</li><li>Edited gallery delivery</li></ul>
+    </div>
+    <div class="service reveal">
+      <span class="num">iii.</span>
+      <h3>Video editing</h3>
+      <p>Post-production for footage you already have — structure, pacing, colour and sound brought together.</p>
+      <ul><li>Story editing &amp; pacing</li><li>Colour grading</li><li>Reels for Instagram</li></ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="wrap" id="process">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow">How it works</span>
+      <h2>From first call to final film</h2>
+    </div>
+  </div>
+  <div class="process-list">
+    <div class="step reveal"><h3>Say hello</h3><p>Send your date, city and the events you're planning. I'll reply with availability and packages.</p></div>
+    <div class="step reveal"><h3>Plan the day</h3><p>We go through the schedule, the rituals that matter most and the people who must be in frame.</p></div>
+    <div class="step reveal"><h3>Shoot</h3><p>Quiet, unobtrusive coverage so the moments stay real — not staged for the camera.</p></div>
+    <div class="step reveal"><h3>Edit &amp; deliver</h3><p>Reels first, then the full film and photos — edited, colour-graded and ready to share.</p></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>Hi, I'm Jaganmohan.</h2>
+      <blockquote>The best wedding films are the ones you still want to watch years later.</blockquote>
+    </div>
+    <div class="about-body reveal">
+      <p>Most people call me Jay. I'm a wedding filmmaker, photographer and video editor, and every film on this page was shot and edited by me, start to finish.</p>
+      <p>I care about the in-between moments as much as the big ones — a parent's glance during the muhurtham, friends losing it on the dance floor, the quiet minute before the bride walks in. I shoot to capture those honestly, then spend the time in the edit to shape them into a story with the right rhythm, colour and music.</p>
+      <p>Whether you need a complete wedding film, a set of photographs, or an editor for footage you already have, I'm happy to talk it through.</p>
+      <div class="tools">
+        <span>Cinematography</span><span>Photography</span><span>Video editing</span><span>Colour grading</span><span>Sound design</span><span>Reels</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's make your <em>film</em>.</h2>
+      <p class="lead">Tell me your wedding date and city, and I'll send over availability and packages — usually within a day.</p>
+    </div>
+    <div class="contact-list reveal">
+      <a href="mailto:Jaycinephile@gmail.com">
+        <div><div class="label">Email</div><div class="value">Jaycinephile@gmail.com</div></div><span class="arrow">&rarr;</span>
+      </a>
+      <a href="https://wa.me/919391193013" target="_blank" rel="noopener">
+        <div><div class="label">WhatsApp</div><div class="value">+91 93911 93013</div></div><span class="arrow">&rarr;</span>
+      </a>
+      <a href="tel:+919391193013">
+        <div><div class="label">Call</div><div class="value">+91 93911 93013</div></div><span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Jaganmohan (Jay) — Wedding Films &amp; Photography</span>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const menuBtn = document.getElementById('menuBtn');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  });
+  document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); menuBtn.textContent = 'Menu';
+  }));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), {rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
